@@ -16,6 +16,7 @@ function formactions(){
 		x[5] = z[1].value;
 	x[6] = document.getElementById("cuisine").value;
 	x[7] = document.getElementById("hiddenval").value;
+	
 	if(x[7]==-1)
 	{
 		var txt = "<tr>";
@@ -28,6 +29,7 @@ function formactions(){
 		display=document.getElementById("disp");
 		display.insertAdjacentHTML( 'beforeend', txt);
 	}
+	
 	else
 	{
 		for(i=0; i<7; i++)
@@ -38,10 +40,12 @@ function formactions(){
 	}
 }
 
+
 function deletevalues(rows){
 	var _row = rows.parentElement.parentElement;
 	document.getElementById('disp').deleteRow(_row.rowIndex);
 }
+
 
 function editvalues(rows){
 	var _row = rows.parentElement.parentElement.rowIndex;
